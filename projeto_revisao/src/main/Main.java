@@ -12,10 +12,10 @@ public class Main {
 		TarefaController tarefaController = 
 				new TarefaController();
 		
-		tarefaController.adicionaTarefa(4, 
-						"Estudar", 
-						"Preciso estudar Java", 
-						Tarefa.Status.A);
+		//tarefaController.adicionaTarefa(5, "Estudar", "Preciso estudar Java", Tarefa.Status.A);
+		
+		
+		tarefaController.listaTarefa();
 		
 		
 		
@@ -29,23 +29,23 @@ public class Main {
 		
 		
 		/*
-		 * Cria um objeto PaisController para nos auxiliar na criação e exibição de
-		 * dados referentes aos países
+		 * Cria um objeto PaisController para nos auxiliar na criaÃ§Ã£o e exibiÃ§Ã£o de
+		 * dados referentes aos paÃ­ses
 		 */
 		//TarefaController tarefaController = new TarefaController();
 
 		// Cria um objeto scanner para ler as entradas de teclado no console
 		//Scanner scanner = new Scanner(System.in);
 
-		// Variavel de controle para nossa estrutura de repetição
+		// Variavel de controle para nossa estrutura de repetiÃ§Ã£o
 		//int opcao = -1;
 
-		// Estrutura de repetição - Repete o laço enquando o usuário não digitar a opção
+		// Estrutura de repetiÃ§Ã£o - Repete o laÃ§o enquando o usuÃ¡rio nÃ£o digitar a opÃ§Ã£o
 		// "0" - sair do sistema
 		/*
 		while (opcao != 0) {
 
-			// Menu da nossa aplicação
+			// Menu da nossa aplicaÃ§Ã£o
 			System.out.println("==== Menu ====");
 			System.out.println("1. Adiciona tarefa");
 			System.out.println("2. Atualiza tarefa");
@@ -53,7 +53,7 @@ public class Main {
 			System.out.println("4. Lista tarefa"); 
 			System.out.println("5. Exclui tarefa");
 			System.out.println("0. Sair");
-			System.out.print("Escolha uma opção: ");
+			System.out.print("Escolha uma opÃ§Ã£o: ");
 
 			try {
 
@@ -82,14 +82,14 @@ public class Main {
 					break;
 
 				default:
-					System.out.println("Opção inválida.");
+					System.out.println("OpÃ§Ã£o invÃ¡lida.");
 					break;
 				}
 			}
 
 			
 			catch (java.util.InputMismatchException e) {
-				System.out.println("Opção inválida. Por favor, digite um número inteiro válido.");
+				System.out.println("OpÃ§Ã£o invÃ¡lida. Por favor, digite um nÃºmero inteiro vÃ¡lido.");
 				scanner.nextLine();
 			}
 		}
