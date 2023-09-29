@@ -1,5 +1,8 @@
 package controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dao.TarefaDAO;
 import model.Tarefa;
 import model.Tarefa.Status;
@@ -36,7 +39,7 @@ public class TarefaController {
 	}
 	
 	public void listaTarefa() {
-		
+		tarefaView.listaTarefa(tarefaDAO.listaTarefa());
 	}
 	
 	public void excluiTarefa() {
