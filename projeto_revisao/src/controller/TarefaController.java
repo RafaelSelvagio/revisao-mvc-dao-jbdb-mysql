@@ -11,39 +11,35 @@ import view.TarefaView;
 public class TarefaController {
 	private TarefaView tarefaView;
 	private TarefaDAO tarefaDAO;
-	
+
 	public TarefaController() {
 		tarefaView = new TarefaView();
 		tarefaDAO = new TarefaDAO();
 	}
 	
-	public void adicionaTarefa(Integer id_tarefa, 
-							   String titulo,
-							   String descricao,
-							   Status status) {
-		Tarefa tarefa = new Tarefa(id_tarefa, 
-								   titulo, 
-								   descricao, 
-								   status);
+	private int obtemMaiorIdTarefa() {
+		return tarefaDAO.obtemMaiorIdTarefa();
+	}
+
+	public void adicionaTarefa(String titulo, String descricao, Status status) {
+		Tarefa tarefa = new Tarefa(obtemMaiorIdTarefa(), titulo, descricao, status);
 		tarefaDAO.adicionaTarefa(tarefa);
 	}
-	
-	
-	
-	public void atualizaTarefa() {
-		
+
+	public void atualizaTarefa(int id_tarefa, String titulo, String descricao, Status status) {
+		tarefaDAO.atualizaTarefa(id_tarefa, titulo, descricao, status);
 	}
-	
-	public void finalizaTarefa() {
-		
+
+	public void finalizaTarefa(int id_tarefa) {
+		tarefaDAO.finalizaTarefa(id_tarefa);
 	}
-	
+
 	public void listaTarefa() {
 		tarefaView.listaTarefa(tarefaDAO.listaTarefa());
 	}
-	
-	public void excluiTarefa() {
-		
+
+	public void excluiTarefa(int id_tarefa) {
+		tarefaDAO.excluiTarefa(id_tarefa);
 	}
-	
+
 }
